@@ -1,0 +1,25 @@
+file.txt tiedostossa on "1"
+komennolla echo 2 > file.txt ylikirjoitetaan tiedoston tiedot "2":lla. (echo > == ylikirjoittaa,
+echo >> == lisää tiedostoon)
+suoritetaan komento git diff, joka näyttää muutokset joita ei ole vielä lisätty Staging Arealle
+Komento git diff --staged näyttää muutokset, jotka ovat Staging Arealla
+tästä syystä komento näyttää nyt tyhjää
+Lisätään file.txt Staging Arealle git add file.txt -komennolla.
+git diff näyttää tyhjää, ja git diff --staged näyttää tiedoston muutokset
+Korvataan file.txt sisältö "3":lla echo 3 > file.txt. Nyt file.txt siirtyy Working Arealle,
+ja edellinen versio yhä Staging Arealla (tarkistus git status).
+git diff -komento kertoo että "2" on korvattu "3":lla. git diff --staged komento taas, että
+Staging Arealla oleva muutos file.txt:hen "1":stä "2":seen.
+
+Annetaan komento git reset HEAD file.txt, jonka johdosta Staging Arealla oleva file.txt palaa
+Working Arealle (unstaging). Tarkistus git status -komennolla.
+git diff -komento näyttää nyt että "1" on korvattu "3":lla. Staging Arealta Working Arealle
+palautettu tiedosto korvaa aikaisemmin Working Arealla olleen.
+Suoritetaan file.txt:lle commit komennoila git add file.txt ja git commit file.txt
+git log näyttää initial commitin "1" ja juuri tehdyn commitin.
+Ylikirjoitetaan echo 4 > file.txt -komennolla tiedostoon "4".
+cat file.txt -komennolla tarkistetaan, että file.txt tiedoston sisältö muuttunut "4"
+git status näyttää, että file.txt on Working Arealla
+Suoritetaan komento git checkout file.txt, joka palauttaa tiedoston tiedot indexistä.
+cat file.txt -komennolla tarkistetaan, että file.txt sisältö on "3"
+git status -komento kertoo, että "nothing to commit"

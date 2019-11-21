@@ -1,0 +1,6 @@
+Tarkastellaan hakemistoa ls -R -komennolla. Isolla R:llä komento listaa tiedostot ja kansiot, sekä avaa kansiot ja näyttää niiden sisällön.
+Suoritetaan clean -komento, joka poistaa tiedostot jotka eivät Staging arealla tai repossa. git clean -n. -n komennon perässä tarkoittaa, että komento ei poista mitään, mutta näyttää mitä poistettaisiin mikäli komento suoritettaisiin tyhjentämismielessä (esim. git clean -f -d) (-f = force, -d = ???)
+Lisätään src/mylib.c Staging Arealle, jotta vältytään tiedoston poistolta. git add src/mylib.c
+Tarkistetaan, että src/mylib.c ei näy poistettavissa tiedostoissa komennolla git clean -n
+Suoritetaan clean-komento rivillä git clean -n -d
+Siistitään repo komennolla git clean -f -d

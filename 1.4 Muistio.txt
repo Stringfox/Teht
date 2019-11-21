@@ -1,0 +1,8 @@
+Luodaan uusi branch "reverting" git branch reverting
+Siirrytään juuri luodulle branchille komennolla git checkout reverting
+git branch -komennolla näemme, että brancheja on nyt kaksi: master ja reverting
+git log --oneline --graph --all nähdään yhdellä rivillä kaikki muutokset kaikista brancheista
+Komennolla cat greeting.txt nähdään tiedoston sisältö "this should have been appended to the original content"
+Komennolla git revert *** kumotaan viimeisin muutos. *** tilalla on lokissa näkyvä viimeisimmän (ylimmän rivin) muutoksen tunniste
+Tarkistetaan tiedoston sisältö cat greeting.txt, saadaan rivi "we want to revert back to this"
+git diff master reverting -komennolla ensimmäista määriteltyä branchia git diff -komennossa verrataan toisena määriteltyyn. Mikäli muutoksia, ensimmäisen määriteltyn branchin erot punaisella, ja toisena määritellyn vihreällä.

@@ -1,0 +1,15 @@
+Komento git status kertoo että käyttäjä on "master"-branchissa
+git log -komento kertoo, että branchilla ei ole suoritettuja committeja
+Luodaan tiedosto file.txt komennolla touch file.txt
+git status listaa juuri luodun tiedoston ja ohjeistaa lisäämään tiedoston Staging Arealle
+Komennolla git add lisätään tiedosto(t) Staging Arealle -> git add file.txt
+git status näyttää tiedoston (file.txt) jonka voi commitoida
+Suoritetaan komento git commit file.txt ja lisätään commit viesti. Tiedosto siirtyy local repoon
+git status -komennolla nähdään, että ei ole tiedostoja joita committaa. Lisäksi ilmoitus, että working tree on clean
+Muokataan tiedostoa file.txt komennolla vim file.txt, lisätään riviin merkki "1", tallennetaan ESC + :w ja poistutaan :q
+git status -komento listaa muutokset, ja ilmoittaa ettei niitä ole lisätty Staging Arealle
+Lisätään file.txt Staging Arealle komennolla git add file.txt
+git status -komento näyttää, että tiedosto on valmiina commitoitavaksi
+Muutetaan tiedostoa jälleen vim file.txt -komennolla, lisätään "2"
+Suoritetaan commit file.txt:lle muutoksen jälkeen git commit file.txt -komennolla
+Tar

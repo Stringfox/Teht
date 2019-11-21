@@ -1,0 +1,26 @@
+Komennolla git branch nähdään luodut branchit "master" ja "second-branch"
+Tällä hetkellä sijainti "master" -branchilla. Tämä voidaan todeta myös git status
+-komennolla, joka kertoo rivillä "on branch ---" millä branchilla tällä hetkellä
+käyttäjä on.
+Luodaan uusi branch nimeltä "mybranch" komennolla git branch mybranch
+git branch -komennolla nähdään listaus brancheista, ja todetaan että uusi branch
+on luotu. Käytetty komento branchia luodessa ei vaihtanut branchia, vaan käyttäjä
+yhä master-branchissa.
+Komennolla git checkout mybranch siirrytään juuri luotuun branchiin.
+git status näyttää, että sijainti halutun mukaisesti "mybranch" -branchilla.
+Workspace näyttää myös sulkeiden sisällä, millä branchilla käyttäjä työskentelee
+Luodaan "mybranch"-branchilla tiedosto file1.txt komennolla touch file1.txt
+commitoidaan file1.txt komennoilla git add file1.txt ja git commit file1.txt
+git log --oneline --graph -komennolla nähdään yhdellä rivillä millä branchilla muutokset
+tehtyinä. Näemme, että viimeisin commit on "mybranch"-branchilla.
+Palataan "master"-branchiin komennolla git checkout master
+"mybranch"-branchille tehty commit ei enää näy komennolla git log --oneline --graph
+(miksi???)
+Luodaan "master"-branchiin file2.txt komennolla touch file2.txt
+Commitoidaan file komennoilla git add file2.txt ja git commit file2.txt
+
+Komennolla git log --oneline --graph --all nähdään kaikkien branchien puu
+Kaikilla brancheilla nyt eri commitit
+Palataan "mybranch"-branchille komennolla git checkout mybranch
+Tarkastellaan tiedostoa komennolla cat file2.txt. Tiedostoa ei löydy.
+Tarkastellaan branchien "mybranch" ja "master" eroja git diff mybranch master -komennolla.
