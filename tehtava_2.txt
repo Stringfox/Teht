@@ -1,0 +1,26 @@
+git init
+touch etunimi_sukunimietukirjain.md
+git add -A
+git commit -m "initial commit"
+git remote add origin <Oman GitHub repon SSH linkki>
+git push -u origin master
+
+Haetaan muiden repository SSH linkit GitHubista.
+Luodaan näille linkeille remote komennolla
+git remote add <kaverin nimi> <kaverin git ssh linkki>
+git remote -v tarkistus että remoten luominen onnistui
+
+git fetch <kaverin nimi> - työskennellään kaverin repossa remotella
+Haluttu yksittäinen tiedosto noudetaan komennolla
+git checkout FETCH_HEAD -- <kaverin tiedosto etunimi_sukunimietukirjain.md>
+Tarkista dir että tiedosto saapunut
+
+git add -A
+git commit <tiedoston nimi>
+Sen jälkeen voit puskea tiedostot omaan repoon komennolla
+git push origin master
+
+
+Kohdatut ongelmat:
+Käytetty aluksi git clonea, jolloin kavereiden lataamat repot GitHubiin
+latautuivat paikalliseen repoon, "repo repon sisällä".
