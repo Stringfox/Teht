@@ -1,0 +1,38 @@
+git init
+touch README.md
+git add -A
+git commit -m "initial commit"
+/// git rm README.md (halutessa poistetaan README.md, mikäli ei poisteta,
+tämä README kopioituu myöhemmin luotavaan uuteen branchiin)
+/// git commit -m "poistettu README.md"
+git checkout -b nimi_filu (luodaan uusi branchi nimeltä nimi_filu ja siirtyy
+suoraan siihen)
+Työskennellään nimi_filu branchissa:
+touch tommi_t.md.md
+git add -A
+git commit -m "lisätty nimi filu"
+
+
+git remote add origin <oma GitHub SSH linkki>
+git remote add <kaverin nimi> <kaverin GitHub SSH linkki>
+Lisätään kaikkien kolmen GitHub remotet
+
+git fetch <kaverin nimi>
+git checkout <kaverin nimi>/<branchin nimi(tässä tehtävässä nimi_filu)
+<etunimi_sukunimenekakirjain.md>
+dir - tarkistus että tiedosto saapunut
+
+Kun kaikkien tiedostot haettu:
+git add -A
+git commit <kaverin tiedoston nimi> ja commit.
+/// Vaihtoehtoisesti git commit -m "<yhteinen commit kaikille tiedostoille>"
+Siirrytään master -branchiin git checkout master
+git merge nimi_filu (Mergen jälkeen ei tarvitse commitoida)
+
+git push origin master nimi_filu
+
+
+
+
+
+
