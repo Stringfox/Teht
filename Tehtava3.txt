@@ -18,7 +18,7 @@ git remote add <kaverin nimi> <kaverin GitHub SSH linkki>
 Lisätään kaikkien kolmen GitHub remotet
 
 git fetch <kaverin nimi>
-git checkout <kaverin nimi>/<branchin nimi(tässä tehtävässä nimi_filu)
+git checkout <kaverin nimi>/<branchin nimi(tässä tehtävässä nimi_filu)>
 <etunimi_sukunimenekakirjain.md>
 dir - tarkistus että tiedosto saapunut
 
@@ -30,9 +30,3 @@ Siirrytään master -branchiin git checkout master
 git merge nimi_filu (Mergen jälkeen ei tarvitse commitoida)
 
 git push origin master nimi_filu
-
-
-
-
-
-
