@@ -5,8 +5,6 @@ Forkataan alkuperäisestä GitHub repo itselleen Fork-toiminnolla, tällä saada
 itselleen oma repo GitHubiin joka jakaa git init historian alkuperäisen
 GitHub repon kanssa, joka luotiin alussa.
 
-Luodaan remote omalle forkille git remote add origin <oma fork repon osoite>
-
 Jokainen alkuperäistä repon luojaa lukuunottamatta kloonaa fork repon itselleen.
 git clone <fork repon ssh osoite>
 
@@ -16,6 +14,7 @@ Jokainen ryhmän jäsen lisää tiedostoon oman nimensä file editorilla ja
 hakemistosta <kloonatun repon nimi>/<tiedoston nimi(tässä harjoituksessa nimet.md)>
 Add
 Commit
+Luodaan remote omalle forkille git remote add origin <oma fork repon osoite>
 Tämän jälkeen pusketaan tiedosto forkattuun remote repoon git push origin
 
 Tämän jälkeen GitHubissa tehdään Pull Request halutulle ryhmän jäsenelle.
@@ -27,4 +26,6 @@ nimenlisäys on puskettu.
 
 Pull Requestin hyväksyy vastaanottava jäsen ja tämä jäsen saa muutoksen, jossa
 lisättynä Pull Requestin tehneen nimi nimet.md tiedostossa.
+
+Jos tulee conflikteja, poistetaan ylimääräiset rivit.
 
